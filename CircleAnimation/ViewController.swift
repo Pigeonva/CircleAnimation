@@ -32,7 +32,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        circle.backgroundColor = .systemPink
+        circle.layer.cornerRadius = circle.frame.height/2
+        view.addSubview(circle)
     }
 
     //MARK: - IBActions
