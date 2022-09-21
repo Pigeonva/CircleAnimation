@@ -23,6 +23,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Stop"/>
+                                <connections>
+                                    <action selector="stopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evl-Qa-Day"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEU-qQ-ud1">
                                 <rect key="frame" x="179" y="684" width="56" height="44"/>
@@ -31,6 +34,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <connections>
+                                    <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cH-Vq-VRV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -42,6 +48,9 @@
                             <constraint firstItem="Fyn-mX-P5X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ulR-pH-Okc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="XEU-qQ-ud1" id="uyf-9O-Fdq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
