@@ -49,5 +49,26 @@ class ViewController: UIViewController {
     }
     
     //MARK: - functions
+    
+    private func defineMove() {
+        switch direction {
+        case .down:
+                self.circle.frame.origin.y += 100
+                self.direction = .right
+                return
+        case .right:
+                self.circle.frame.origin.x += 100
+                self.direction = .up
+                return
+        case .up:
+                    self.circle.frame.origin.y -= 100
+                    self.direction = .left
+                    return
+        case .left:
+                self.circle.frame.origin.x -= 100
+                self.direction = .down
+                return
+        }
+    }
 }
 
