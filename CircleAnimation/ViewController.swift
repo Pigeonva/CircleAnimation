@@ -42,11 +42,12 @@ class ViewController: UIViewController {
     //MARK: - IBActions
     
     @IBAction func startPressed(_ sender: UIButton) {
-        
+        moveCircle()
     }
     
     @IBAction func stopPressed(_ sender: UIButton) {
-        
+        condition = false
+        startButton.isEnabled = true
     }
     
     //MARK: - functions
