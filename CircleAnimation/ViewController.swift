@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     
     var circle = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
     var direction: Direction = .down
+    let step: CGFloat = 100
     var condition = false
     
     //MARK: - Lifecycle methods
@@ -53,19 +54,19 @@ class ViewController: UIViewController {
     private func defineMove() {
         switch direction {
         case .down:
-                self.circle.frame.origin.y += 100
+                self.circle.frame.origin.y += step
                 self.direction = .right
                 return
         case .right:
-                self.circle.frame.origin.x += 100
+                self.circle.frame.origin.x += step
                 self.direction = .up
                 return
         case .up:
-                    self.circle.frame.origin.y -= 100
+                    self.circle.frame.origin.y -= step
                     self.direction = .left
                     return
         case .left:
-                self.circle.frame.origin.x -= 100
+                self.circle.frame.origin.x -= step
                 self.direction = .down
                 return
         }
