@@ -51,6 +51,20 @@ class ViewController: UIViewController {
     
     //MARK: - functions
     
+    private func moveCircle() {
+        condition = true
+        if condition {
+            self.startButton.isEnabled = false
+        }
+        UIView.animate(withDuration: 0.3) {
+            self.defineMove()
+        } completion: { _ in
+            if self.condition {
+            self.moveCircle()
+            }
+        }
+    }
+    
     private func defineMove() {
         switch direction {
         case .down:
